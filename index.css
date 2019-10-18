@@ -27,8 +27,12 @@
     background-color: lightsalmon;
     height: 100vh;
 }
+.banner2__card{
+    width: 65%;
+}
 .card__image{
-    width: 40%;
+    margin-left: 5%;
+    width: 90%;
     padding-top: 3%;
 }
 .card__footer{
