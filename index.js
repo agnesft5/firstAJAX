@@ -4,7 +4,11 @@ let objProduct;
 //Botons
 let enviarButton = document.querySelector(".banner__sendbutton");
 let inputCodigo = document.getElementById("codigoProducto");
-//enviarButton.addEventListener("click,"function()=>{})
+let volverButton = document.querySelector(".banner2__volverbutton");
+let divContenidor = document.querySelector(".initial__banner");
+let banner1 = document.querySelector(".body__banner");
+let banner2 = document.querySelector(".body__banner2");
+
 
 
 ///Funció petició amb callback
@@ -110,7 +114,20 @@ function canviarLink(){
     httpGet("https://cors-anywhere.herokuapp.com/https://world.openfoodfacts.org/api/v0/product/"+productCode+".json",guardarDatos);
 }
 
-enviarButton.addEventListener("click",()=>{canviarLink()});
+enviarButton.addEventListener("click",()=>{
+    canviarLink();
+    banner1.className="banner text-center body__banner d-none";
+    banner2.className="banner bg-orange text-center body__banner2";
 
+});
 
+volverButton.addEventListener("click",()=>{
+    banner1.className="banner text-center body__banner";
+    banner2.className="banner bg-orange text-center body__banner2 d-none";
+    ereseValue();
+});
+
+function ereseValue(){
+    inputCodigo.value="";
+};
 //Codi:8422904015553
