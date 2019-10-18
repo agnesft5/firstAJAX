@@ -1,3 +1,12 @@
+//Variable global:
+let objProduct;
+
+//Botons
+let enviarButton = document.querySelector(".banner__sendbutton");
+let inputCodigo = document.getElementById("codigoProducto");
+//enviarButton.addEventListener("click,"function()=>{})
+
+
 ///Funció petició amb callback
 function httpGet(theUrl, callback) {
     
@@ -11,8 +20,6 @@ function httpGet(theUrl, callback) {
     xmlHttp.send();
 }
 
-let objProduct;
-
 //Funció per guardar les dades
 function guardarDatos(text){
    objProduct = JSON.parse(text) //objJSON
@@ -22,7 +29,11 @@ function guardarDatos(text){
    imprimirValor(nutrients,"carbohydrates_100g");
    imprimirValor(nutrients,"fat_100g");
    let link = buscarImg(product);
-   
+   let fotoProduct = document.querySelector(".card__image");
+   fotoProduct.src = link;
+   let productName = buscarProductName(product);
+   let fotoProductFooter = document.querySelector(".card__footer");
+   fotoProductFooter.innerHTML = productName;
 
 // buscar elem por id o class y usar innerHTML
 }
@@ -60,11 +71,9 @@ function buscarNutrients(producto){
     return nutriente;
 }
 
-//Funció per treure CH
+//Funció per treure Macro Nutrients
 function buscarMacroNutriente(nutriente,attr){
-
 //return nutriente[attr];
-
     let datoFinal =""
     for (let clave in nutriente){
         if (clave == attr){
@@ -74,17 +83,34 @@ function buscarMacroNutriente(nutriente,attr){
     return datoFinal;
 }
 
-
-//PATH FOTO objProduct.product["selected_images"]["front"]["display"]["es"]
-//Funció per treure el objecte de les fotos
+//Funció per treure l'objecte de les fotos
 function buscarImg(producto){
     let link = "";
-    link = producto["selected_images"]["front"]["display"]["es"];
+    if (producto["selected_images"]["front"]["display"]["fr"] != undefined){
+        link = producto["selected_images"]["front"]["display"]["fr"];
+    }else{
+        link = producto["selected_images"]["front"]["display"]["es"]
+    }
     console.log(link);
     return link;
 }
 
+//Funció per treure el nom de l'aliment
+function buscarProductName (producto){
+    let productName = "";
+    productName = producto["product_name"];
+    console.log(productName);
+    return productName;
+}
+
 
 //Impresió producte per codi de barres
-let productCode = "8422904015553"; //Codi de barres del producte
-httpGet("https://cors-anywhere.herokuapp.com/https://world.openfoodfacts.org/api/v0/product/"+productCode+".json",guardarDatos);
+function canviarLink(){
+    let productCode = inputCodigo.value;
+    httpGet("https://cors-anywhere.herokuapp.com/https://world.openfoodfacts.org/api/v0/product/"+productCode+".json",guardarDatos);
+}
+
+enviarButton.addEventListener("click",()=>{canviarLink()});
+
+
+//Codi:8422904015553
