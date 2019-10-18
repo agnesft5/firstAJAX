@@ -25,9 +25,11 @@
 }
 .body__banner2{
     background-color: lightsalmon;
-    height: 100vh;
+    height: 100%;
 }
 .banner2__card{
+    position: relative;
+    display: inline-flex;
     width: 65%;
 }
 .card__image{
