@@ -118,7 +118,6 @@ enviarButton.addEventListener("click",()=>{
     canviarLink();
     banner1.className="banner text-center body__banner d-none";
     banner2.className="banner bg-orange text-center body__banner2";
-
 });
 
 volverButton.addEventListener("click",()=>{
