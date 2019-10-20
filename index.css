@@ -32,13 +32,13 @@
     display: inline-flex;
     width: 65%;
 }
-.card__image{
+.cardb2__image{
     margin-left: 5%;
     width: 90%;
     padding-top: 3%;
     border-radius: 0.25rem;
 }
-.card__footer{
+.cardb2__footer{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-top: 5%;
@@ -51,8 +51,49 @@
 .banner2__row{
     padding-top: 5%;
 }
-.banner2__volverbutton{
+.banner2__cantidadbutton{
     opacity: 0.6;
     font-size: 17px;
     margin: 5% !important;
+}
+.banner2__quantitytext{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+.body__banner3{
+    background-color: lightsalmon;
+    height: 100%;
+}
+.banner3__card{
+    position: relative;
+    display: inline-flex;
+    width: 65%;
+}
+.cardb3__image{
+    margin-left: 5%;
+    width: 90%;
+    padding-top: 3%;
+    border-radius: 0.25rem;
+}
+.cardb3__footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+.information__container{
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+}
+.banner3__row{
+    padding-top: 5%;
+}
+.banner3__volverbutton{
+    opacity: 0.6;
+    font-size: 17px;
+    margin: 5% !important;
+}
+.banner3__quantitytext{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
 }

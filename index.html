@@ -33,52 +33,54 @@
             <div class="row banner2__row">
                 <div class="col-sm-12 col-md-6 d-*-inline-flex">
                     <div class="card text-center m-2 banner2__card">
-                            <img src="" class="card__image">
-                        <h2 class="card__footer"></h2>
+                            <img src="" class="cardb2__image">
+                        <h2 class="cardb2__footer"></h2>
+                    </div>
+                </br>
+                    <div class="banner2__quantitytext d-inline-flex">
+                        <h6 class ="product__quantity">Cantidad de producto:  </h6>
+                        <h6 class="quantity__inputb2"></h6>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <div class="information__container m-3">
                         <h4 class="text-center">Valoración nutricional por 100g</h4>
                         <p></p>
+                    <br>
                     </br>
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">Valor energético</th>
-                                    <td id=""></td>
+                                    <th scope="row">Valor energético (kcal)</th>
+                                    <td id="energy_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Valor energético</th>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Hidratos de carbono</th>
+                                    <th scope="row">Hidratos de carbono (g)</th>
                                     <td id="carbohydrates_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">De los cuales azúcares</th>
-                                    <td></td>
+                                    <th scope="row">De los cuales azúcares (g)</th>
+                                    <td id="sugars_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Proteínas</th>
-                                    <td></td>
+                                    <th scope="row">Proteínas (g)</th>
+                                    <td id="proteins_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Grasas</th>
+                                    <th scope="row">Grasas (g)</th>
                                     <td id="fat_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">De las cuales saturadas</th>
-                                    <td></td>
+                                    <th scope="row">De las cuales saturadas (g)</th>
+                                    <td id="saturated-fat_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Fibra</th>
-                                    <td></td>
+                                    <th scope="row">Fibra (g)</th>
+                                    <td id="fiber_100g"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Sal</th>
-                                    <td></td>
+                                    <th scope="row">Sal (g)</th>
+                                    <td id="salt_100g"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -87,12 +89,79 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-secondary m-2 banner2__volverbutton">Volver</button>
+                    <button type="button" class="btn btn-secondary m-2 banner2__cantidadbutton">Ver valoración por cantidad</button>
                 </div>
             </div>
         </div>
       </div>
     </div>
+    <div class="result__banner"> <!--Banner3-->
+        <div class="banner bg-orange text-center body__banner3 d-none">
+          <div class="container">
+              <div class="row banner3__row">
+                  <div class="col-sm-12 col-md-6 d-*-inline-flex">
+                      <div class="card text-center m-2 banner2__card">
+                              <img src="" class="cardb3__image">
+                          <h2 class="cardb3__footer"></h2>
+                      </div>
+                  </br>
+                      <div class="banner3__quantitytext d-inline-flex">
+                          <h6 class ="product__quantity">Cantidad de producto:  </h6>
+                          <h6 class="quantity__inputb3">5g</h6>
+                      </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                      <div class="information__container m-3">
+                          <h4 class="text-center">Valoración nutricional por cantidad de producto</h4>
+                          <p></p>
+                      </br>
+                          <table class="table">
+                              <tbody>
+                                  <tr>
+                                      <th scope="row">Valor energético (kcal)</th>
+                                      <td id="energy_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Hidratos de carbono (g)</th>
+                                      <td id="carbohydrates_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">De los cuales azúcares (g)</th>
+                                      <td id="sugars_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Proteínas (g)</th>
+                                      <td id="proteins_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Grasas (g)</th>
+                                      <td id="fat_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">De las cuales saturadas (g)</th>
+                                      <td id="saturated-fat_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Fibra (g)</th>
+                                      <td id="fiber_cantidad"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Sal (g)</th>
+                                      <td id="salt_cantidad"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <button type="button" class="btn btn-secondary m-2 banner3__volverbutton">Volver</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
 
 
     
