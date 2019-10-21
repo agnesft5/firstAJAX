@@ -93,6 +93,13 @@ function imprimirValor(nutrients,nombreMacro){
    infoMacro.innerHTML = `${valor}`;
 }
 
+// function imprimirValorMultiplicado(nutrients,nombreMacro){
+//     let valor = buscarMacroNutriente(nutrients, nombreMacro);
+//     calclularPorCantidad(valor,cantidad);
+//     let valorMultiplicado = calclularPorCantidad(valor,cantidad);
+//     return valorMultiplicado;   
+//  }
+
 //Funció per treure el producte
 function buscarProduct(objJSON){
     return objJSON.product;
@@ -128,7 +135,7 @@ function buscarMacroNutriente(nutriente,attr){
         if (clave == attr){
             datoFinal = nutriente[clave];
         }else if(nutriente == undefined){
-            datoFinal = "0";
+            datoFinal = 0;
         }
     }
     return datoFinal;
