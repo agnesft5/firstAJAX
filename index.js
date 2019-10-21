@@ -91,7 +91,11 @@ function guardarDatos(text){
 function imprimirValor(nutrients,nombreMacro){
    let valor = buscarMacroNutriente(nutrients, nombreMacro);
    let infoMacro = document.querySelector("#"+nombreMacro);
+
+    valor = 0;//posar aquí if per imprimir 0
+
    infoMacro.innerHTML = `${valor}`;
+   return valor;
 }
 
 // function imprimirValorMultiplicado(nutrients,nombreMacro){
@@ -135,8 +139,10 @@ function buscarMacroNutriente(nutriente,attr){
     for (let clave in nutriente){
         if (clave == attr){
             datoFinal = nutriente[clave];
-        }else if(nutriente == undefined){
-            datoFinal = "0";
+        }
+        
+        if(nutriente == undefined){
+            datoFinal = 0;
         }
     }
     return datoFinal;
@@ -203,7 +209,7 @@ function ereseValue(){
 };
 
 function calclularPorCantidad (valor,cantidad){
-    let resultadoPorCantidad = (valor/100)*cantidad;
+    let resultadoPorCantidad = (valor/100)*parseInt(cantidad);
     return resultadoPorCantidad;
 };
 
