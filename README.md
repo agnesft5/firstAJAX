@@ -1,4 +1,4 @@
-# **Valoración Nutricional de un producto según su _barcode_ **
+# Valoración Nutricional de un producto según su _barcode_
 
 ## **Descripción**
 
