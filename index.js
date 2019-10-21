@@ -92,7 +92,7 @@ function imprimirValor(nutrients,nombreMacro){
    let valor = buscarMacroNutriente(nutrients, nombreMacro);
    let infoMacro = document.querySelector("#"+nombreMacro);
 
-    valor = 0;//posar aquí if per imprimir 0
+    //valor = 0;//posar aquí if per imprimir 0
 
    infoMacro.innerHTML = `${valor}`;
    return valor;
