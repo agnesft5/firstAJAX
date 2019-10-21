@@ -21,11 +21,12 @@ function httpGet(theUrl, callback) {
     xmlHttp.onreadystatechange = function () {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
+            console.log("checkpoint");
     }
-    xmlHttp.open("GET", theUrl);
+    xmlHttp.open("GET", theUrl, false);
     xmlHttp.setRequestHeader("X-Requested-With", "XMLHttpRequest")
     xmlHttp.send();
-}
+};
 
 //Funció per guardar les dades
 function guardarDatos(text){
@@ -125,7 +126,7 @@ function buscarNutrients(producto){
     }
 
     return nutriente;
-}
+};
 
 //Funció per treure Macro Nutrients
 function buscarMacroNutriente(nutriente,attr){
@@ -135,11 +136,11 @@ function buscarMacroNutriente(nutriente,attr){
         if (clave == attr){
             datoFinal = nutriente[clave];
         }else if(nutriente == undefined){
-            datoFinal = 0;
+            datoFinal = "0";
         }
     }
     return datoFinal;
-}
+};
 
 //Funció per treure l'objecte de les fotos
 function buscarImg(producto){
@@ -152,7 +153,7 @@ function buscarImg(producto){
         link = producto["selected_images"]["front"]["display"]["en"];
     }
     return link;
-}
+};
 
 //Funció per treure el nom de l'aliment
 function buscarProductName (producto){
@@ -160,21 +161,21 @@ function buscarProductName (producto){
     productName = producto["product_name"];
     console.log(productName);
     return productName;
-}
+};
 
 //Funció per treure el gramatge de l'aliment
 function buscarCantidad (producto){
     let quantity ="";
     quantity = producto["quantity"];
     return quantity;
-}
+};
 
 
 //Impresió producte per codi de barres
 function canviarLink(){
     let productCode = inputCodigo.value;
     httpGet("https://cors-anywhere.herokuapp.com/https://world.openfoodfacts.org/api/v0/product/"+productCode+".json",guardarDatos);
-}
+};
 
 enviarButton.addEventListener("click",()=>{
     canviarLink();
